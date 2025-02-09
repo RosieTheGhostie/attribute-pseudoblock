@@ -3,6 +3,9 @@
 //! Provides the enum [`Endian`], which indicates the intended byte order/endianness. This
 //! information can be seamlessly processed via [`serde`].
 
+#[cfg(feature = "byte_stream")]
+pub mod byte_stream;
+
 use serde::{Deserialize, Serialize};
 use std::fmt::{Display, Formatter, Result as FmtResult};
 
